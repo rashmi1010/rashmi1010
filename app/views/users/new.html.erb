@@ -1,0 +1,62 @@
+<h1>Users  names details </h1>
+
+<%= form_for @user , :url => users_path , method: :post do |f| %>	
+
+ Name : <%= f.text_field :name %>
+
+ 
+
+<br>
+<br>
+<br>
+<div>
+    <b><%= f.label :"ARE YOU INTERESTED TO JOIN "%><br /></b>
+    <%= f.label :name, "yes", :value => "true"  %>
+    <%= f.radio_button :name, true %>
+    <%= f.label :name, "no", :value => "false" %>
+    <%= f.radio_button :name, false, :checked => true %>
+    
+  </div> 
+  <br>
+<br>
+<!-- <br>
+ <b><%#= f.label :"HOBBIES"%> </b>
+ <br>
+<%#= f.check_box(:checkbox) %>
+<%#= f.label(:checkbox, "Dance") %>
+<br/>
+<%#= f.check_box(:checkbox) %>
+<%#= f.label(:checkbox, "Badminton") %>
+<br>
+ 
+<%#= f.check_box(:checkbox) %>
+<%#= f.label(:checkbox, "cricket") %>
+<br/>
+ <%#= f.check_box(:checkbox) %>
+ <%#= f.label(:checkbox, "Football") %>
+<br> -->
+<p>
+<%= f.label 'checkbox : ' %>
+<%= check_box_tag 'user[checkbox][]', 'Cricket', checked('Cricket') %>
+<%= label_tag  'Cricket' %>
+
+<%= check_box_tag 'user[checkbox][]', 'Football', checked('Football')%>
+<%= label_tag 'Football' %>
+
+<%= check_box_tag 'user[checkbox][]', 'Hockey', checked('Hockey')%>
+<%= label_tag  'Hockey' %>
+
+<%= check_box_tag 'user[checkbox][]', 'Other', checked('Other')%>
+<%= label_tag 'Other' %>
+</p>
+
+
+<%= f.select :dropdown, ['A-', 'B-','AB+','A+','B+','O+','O-','AB-','UNKNOWN']%>
+
+<br>
+<br>
+<br>
+
+<%= submit_tag 'submit'  %>
+
+<% end %>

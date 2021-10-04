@@ -1,0 +1,33 @@
+<style type="text/css">
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  height :50px;
+  width :500px ;
+}
+</style>
+<table>
+	 <tr>
+	 	<th> name </th> 
+		<th> show </th> 
+	 	<th> edit </th> 
+	 	<th> delete </th> 
+	 </tr>
+	<% @dogs.each do|t|%>
+
+		<tr>
+			<td><%= t.name%></td>
+			<td><%= link_to "show" , dogie_path(t.id) %></td>
+			<td><%= link_to "edit" , edit_dogie_path(t.id) %></td>
+			<td><%= link_to "delete" , dogie_path(t.id) ,method: :DELETE %></td>
+		</tr>	 
+<% end %>
+</table>
+
+<br>
+<br>
+<br> 
+<%= link_to "new ", new_dogie_path %>
+<br>
+<br>
+<%= link_to "Add new user" , new_user_path %>

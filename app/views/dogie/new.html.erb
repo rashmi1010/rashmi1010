@@ -1,0 +1,15 @@
+<h1>Users details </h1>
+
+<%= form_for @dog , :url => dogie_index_path , method: :post do |f| %>
+
+
+ Name : <%= f.text_field :name %>
+	<br>
+	<br>
+	<br> 
+
+	
+
+	<%= submit_tag 'submit'  %>
+
+<% end %>

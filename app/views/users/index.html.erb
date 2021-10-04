@@ -1,0 +1,15 @@
+
+
+<h1> users name </h1>
+
+<%@users.each do |t|%>
+
+<%=t.name%><br><br>
+<%=t.dropdown%><br><br>
+<%=t.checkbox%><br><br>
+
+
+<%#= t.select :dropdown, options_for_select(User.all.map{|user| [user.name, user.id]}) %>
+
+<br>
+<%end%>

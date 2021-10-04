@@ -1,0 +1,16 @@
+<h1>Users phone number details </h1>
+
+<%= form_for PhoneNumber.new , :url => phone_number_index_path , method: :post do |f| %>	
+
+ Number : <%= f.text_field :number %>
+ 
+ <%=f.text_field :user_id, value: @user.id%>
+	<br>
+	<br>
+	<br> 
+
+
+	
+	<%= submit_tag 'submit'  %>
+
+<% end %>

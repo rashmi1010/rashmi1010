@@ -1,0 +1,15 @@
+<h1>Users details </h1>
+
+<%= form_for @dog,  :url => dogie_path ,method: :patch do |f| %>
+  
+	<%= label_tag(:name, 'Enter_name ' ) %>
+  <%= f.text_field (:name) %>
+	<br>
+	<br>
+	<br>
+
+	
+
+<%= submit_tag('submit')  %>
+
+<% end %>
